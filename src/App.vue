@@ -26,6 +26,11 @@
             </v-btn-toggle>
           </v-col>
         </v-row>
+        <v-row v-show="!this.$store.state.rwConfig.selectedJobs.length">
+          <v-col>
+            <div class="text-center text-sm-caption">Select a Job to proceed</div>
+          </v-col>
+        </v-row>
         <v-row>
           <job-container v-for="job in jobs" :key="job.id" :job="job"></job-container>      
         </v-row>
