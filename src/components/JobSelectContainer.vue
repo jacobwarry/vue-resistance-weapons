@@ -1,7 +1,7 @@
 ﻿<template>
   <v-expansion-panels class="my-5" v-model="panel">
     <v-expansion-panel>
-      <v-expansion-panel-header>Jobs</v-expansion-panel-header>
+      <v-expansion-panel-header>Select the Jobs to track your Resistance Weapon progress</v-expansion-panel-header>
       <v-expansion-panel-content>
           <v-radio-group
               row

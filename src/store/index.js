@@ -7,11 +7,17 @@ export default new Vuex.Store({
   state: {
     rwConfig: {
       selectedJobs: [],
-      progress: []
+      progress: [],
+      sortOrder: {
+        field: 'classSort',
+        btnIndex: 0
+      }
     },
     jobs: [
       {
         id: 19,
+        classSort: 1,
+        bookSort: 1,
         icon: require("@/assets/paladin.png"),
         name: "Paladin",
         weapons: [
@@ -43,6 +49,8 @@ export default new Vuex.Store({
       },
       {
         id: 21,
+        classSort: 2,
+        bookSort: 3,
         icon: require("@/assets/warrior.png"),
         name: "Warrior",
         weapons: [
@@ -74,6 +82,8 @@ export default new Vuex.Store({
       },
       {
         id: 32,
+        classSort: 3,
+        bookSort: 11,
         icon: require("@/assets/darkknight.png"),
         name: "Dark Knight",
         weapons:[
@@ -105,6 +115,8 @@ export default new Vuex.Store({
       },
       {
         id: 37,
+        classSort: 4,
+        bookSort: 16,
         icon: require("@/assets/gunbreaker.png"),
         name: "Gunbreaker",
         weapons: [
@@ -136,6 +148,8 @@ export default new Vuex.Store({
       },
       {
         id: 24,
+        classSort: 5,
+        bookSort: 7,
         icon: require("@/assets/whitemage.png"),
         name: "White Mage",
         weapons: [
@@ -167,6 +181,8 @@ export default new Vuex.Store({
       },
       {
         id: 28,
+        classSort: 6,
+        bookSort: 10,
         icon: require("@/assets/scholar.png"),
         name: "Scholar",
         weapons: [
@@ -198,6 +214,8 @@ export default new Vuex.Store({
       },
       {
         id: 33,
+        classSort: 7,
+        bookSort: 13,
         icon: require("@/assets/astrologian.png"),
         name: "Astrologian",
         weapons: [
@@ -229,6 +247,8 @@ export default new Vuex.Store({
       },
       {
         id: 20,
+        classSort: 8,
+        bookSort: 2,
         icon: require("@/assets/monk.png"),
         name: "Monk",
         weapons: [
@@ -260,6 +280,8 @@ export default new Vuex.Store({
       },
       {
         id: 22,
+        classSort: 9,
+        bookSort: 4,
         icon: require("@/assets/dragoon.png"),
         name: "Dragoon",
         weapons: [
@@ -291,6 +313,8 @@ export default new Vuex.Store({
       },
       {
         id: 30,
+        classSort: 10,
+        bookSort: 6,
         icon: require("@/assets/ninja.png"),
         name: "Ninja",
         weapons: [
@@ -322,6 +346,8 @@ export default new Vuex.Store({
       },
       {
         id: 34,
+        classSort: 11,
+        bookSort: 14,
         icon: require("@/assets/samurai.png"),
         name: "Samurai",
         weapons: [
@@ -353,6 +379,8 @@ export default new Vuex.Store({
       },
       {
         id: 23,
+        classSort: 12,
+        bookSort: 5,
         icon: require("@/assets/bard.png"),
         name: "Bard",
         weapons: [
@@ -384,6 +412,8 @@ export default new Vuex.Store({
       },
       {
         id: 31,
+        classSort: 13,
+        bookSort: 12,
         icon: require("@/assets/machinist.png"),
         name: "Machinist",
         weapons: [
@@ -415,6 +445,8 @@ export default new Vuex.Store({
       },
       {
         id: 38,
+        classSort: 14,
+        bookSort: 17,
         icon: require("@/assets/dancer.png"),
         name: "Dancer",
         weapons: [
@@ -446,6 +478,8 @@ export default new Vuex.Store({
       },
       {
         id: 25,
+        classSort: 15,
+        bookSort: 8,
         icon: require("@/assets/blackmage.png"),
         name: "Black Mage",
         weapons: [
@@ -477,6 +511,8 @@ export default new Vuex.Store({
       },
       {
         id: 27,
+        classSort: 16,
+        bookSort: 9,
         icon: require("@/assets/summoner.png"),
         name: "Summoner",
         weapons: [
@@ -508,6 +544,8 @@ export default new Vuex.Store({
       },
       {
         id: 35,
+        classSort: 17,
+        bookSort: 15,
         icon: require("@/assets/redmage.png"),
         name: "Red Mage",
         weapons: [
@@ -760,6 +798,10 @@ export default new Vuex.Store({
       }
       state.rwConfig.progress.push(args);
       localStorage.rwConfig = JSON.stringify(state.rwConfig);
+    },
+    SET_SORT_ORDER(state, args) {
+      state.rwConfig.sortOrder = args;
+      localStorage.rwConfig = JSON.stringify(state.rwConfig);
     }
   },
   actions: {
@@ -771,6 +813,9 @@ export default new Vuex.Store({
     },
     setJobProgress({ commit }, args) {
       commit('SET_JOB_PROGRESS', args);
+    },
+    setSortOrder({ commit }, args){
+      commit('SET_SORT_ORDER', args);
     }
   },
   modules: {},
