@@ -21,8 +21,8 @@
         <v-row v-show="this.$store.state.rwConfig.selectedJobs.length">
           <v-col>
             <v-btn-toggle v-model="toggleSort">
-              <v-btn small @click="setSortOrder('classSort', 0)"><span class="hidden-sm-and-down">Sort By</span>Job Category</v-btn>
-              <v-btn small @click="setSortOrder('bookSort', 1)"><span class="hidden-sm-and-down">Sort By</span>Achievement Order</v-btn>
+              <v-btn small @click="setSortOrder('classSort', 0)"><span class="hidden-sm-and-down">Sort By</span> Job Category</v-btn>
+              <v-btn small @click="setSortOrder('bookSort', 1)"><span class="hidden-sm-and-down">Sort By</span> Achievement Order</v-btn>
             </v-btn-toggle>
           </v-col>
         </v-row>
