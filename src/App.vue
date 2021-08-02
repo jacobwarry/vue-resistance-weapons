@@ -38,7 +38,7 @@
     </v-main>
     <v-footer class="mt-4">
       <v-col class="text-center">
-        <div class="caption">FINAL FANTASY XIV © 2010 - {{ new Date().getFullYear() }} | SQUARE ENIX CO., LTD. All Rights Reserved.</div>
+        <div class="caption">Powered by data from <a href="https://www.xivapi.com" target="_blank">XIVAPI</a>. || FINAL FANTASY XIV © 2010 - {{ new Date().getFullYear() }} | SQUARE ENIX CO., LTD. All Rights Reserved.</div>
         <div class="caption">Created by <a href="https://eu.finalfantasyxiv.com/lodestone/character/1836393/" class="text-decoration-none" target="_blank">Djessica Taimi</a> of Phoenix</div>
       </v-col>
     </v-footer>
