@@ -56,7 +56,7 @@ export default {
   },
   computed: {
     currentQuest() {
-      return this.$store.getters.getQuestbyId(this.currentQuestId);
+      return this.$store.getters.getQuestById(this.currentQuestId);
     }
   },
   data: () => ({
