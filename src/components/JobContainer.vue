@@ -14,18 +14,14 @@
               <v-img v-else src="@/assets/qi/071025_hr1.png"></v-img>
             </v-list-item-avatar>
             <v-list-item-content v-if="currentQuest" class="subtitle-1">{{ currentQuest.name }}</v-list-item-content>
-            <v-list-item-content v-else class="subtitle-1">All done!</v-list-item-content>
+            <v-list-item-content v-else class="subtitle-1">Resistance Weapon Completed!</v-list-item-content>
           </v-list-item>
-          <v-chip-group v-if="currentQuest">
-            <v-chip label outlined v-for="item in currentQuest.items" :key="item.id" >
-              <v-img :src="item.icon" max-width="20"></v-img> <span class="ml-2">x {{item.quantity}}</span>
+          <div v-if="currentQuest">
+            <v-chip label outlined v-for="item in currentQuest.items" :key="item.id" class="mx-1">
+              <v-img :src="item.icon" max-width="20" :alt="item.name"></v-img> <span class="ml-2">x {{item.quantity}}</span>
             </v-chip>
-          </v-chip-group>
-          <v-chip-group v-else>
-            <v-chip label outlined>
-              <span>&nbsp;</span>
-            </v-chip>
-          </v-chip-group>
+          </div>
+          <v-sheet v-else height="32"></v-sheet>
         </v-card-text>
       </v-card>
       <v-progress-linear :value="(currentStage / 6) * 100" color="green" height="2">

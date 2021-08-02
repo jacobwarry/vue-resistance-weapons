@@ -3,6 +3,7 @@
     <v-expansion-panel>
       <v-expansion-panel-header>Select the Jobs to track your Resistance Weapon progress</v-expansion-panel-header>
       <v-expansion-panel-content>
+        <v-divider dark></v-divider>
           <v-radio-group
               row
               dense

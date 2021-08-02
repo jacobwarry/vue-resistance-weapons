@@ -15,7 +15,7 @@
     </v-app-bar>
     <v-main>
       <v-container>
-        <v-img src="@/assets/qi/101069_hr1.png" max-height="250"></v-img>
+        <v-img src="@/assets/qi/101069_hr1.png" max-height="225"></v-img>
         <job-select-container></job-select-container>
         <job-completion-container></job-completion-container>
         <v-row v-show="this.$store.state.rwConfig.selectedJobs.length">

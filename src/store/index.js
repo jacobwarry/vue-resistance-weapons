@@ -7,7 +7,76 @@ export default new Vuex.Store({
   state: {
     rwConfig: {
       selectedJobs: [],
-      progress: [],
+      progress: [
+        {
+          id: 19,
+          stage: 0
+        },
+        {
+          id: 21,
+          stage: 0
+        },
+        {
+          id: 32,
+          stage: 0
+        },
+        {
+          id: 37,
+          stage: 0
+        },
+        {
+          id: 24,
+          stage: 0
+        },
+        {
+          id: 28,
+          stage: 0
+        },
+        {
+          id: 33,
+          stage: 0
+        },
+        {
+          id: 20,
+          stage: 0
+        },
+        {
+          id: 22,
+          stage: 0
+        },
+        {
+          id: 30,
+          stage: 0
+        },
+        {
+          id: 34,
+          stage: 0
+        },
+        {
+          id: 23,
+          stage: 0
+        },
+        {
+          id: 31,
+          stage: 0
+        },
+        {
+          id: 38,
+          stage: 0
+        },
+        {
+          id: 25,
+          stage: 0
+        },
+        {
+          id: 27,
+          stage: 0
+        },
+        {
+          id: 35,
+          stage: 0
+        },
+      ],
       sortOrder: {
         field: 'classSort',
         btnIndex: 0
