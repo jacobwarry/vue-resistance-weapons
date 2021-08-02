@@ -3,24 +3,23 @@
     <v-main>
       <v-container>
         <job-select-container></job-select-container>
-        <job-category-container
-            v-for="jobCategory in jobCategories"
-            :key="jobCategory.id"
-            :job-category="jobCategory"
-        >          
-        </job-category-container>
+        <job-completion-container></job-completion-container>
+        <v-row>
+          <job-container v-for="job in jobs" :key="job.id" :job="job"></job-container>      
+        </v-row>
       </v-container>
     </v-main>
   </v-app>
 </template>
 
 <script>
-
-import JobCategoryContainer from "@/components/JobCategoryContainer";
 import JobSelectContainer from "@/components/JobSelectContainer";
+import JobCompletionContainer from "@/components/JobCompletionContainer";
+import JobContainer from "@/components/JobContainer";
+
 export default {
   name: "App",
-  components: { JobSelectContainer, JobCategoryContainer },
+  components: { JobContainer, JobCompletionContainer, JobSelectContainer },
   beforeCreate() {
     if (localStorage.rwConfig) {
       this.$store.dispatch('setConfig', JSON.parse(localStorage.rwConfig));
@@ -29,10 +28,12 @@ export default {
     }
   },
   computed: {
+    jobs() {
+      return this.$store.state.jobs;      
+    },
     jobCategories() {
       return this.$store.state.jobCategories;
     }
-  },
-  data: () => ({ }),
+  }
 };
 </script>

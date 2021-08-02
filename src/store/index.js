@@ -6,8 +6,538 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     rwConfig: {
-      selectedJobs: []
+      selectedJobs: [],
+      progress: []
     },
+    jobs: [
+      {
+        id: 19,
+        icon: require("@/assets/paladin.png"),
+        name: "Paladin",
+        weapons: [
+          {
+            icon: require("@/assets/rw/030620_hr1.png"),
+            name: "Honorbound",
+          },
+          {
+            icon: require("@/assets/rw/030620_hr1.png"),
+            name: "Augmented Honorbound",
+          },
+          {
+            icon: require("@/assets/rw/030620_hr1.png"),
+            name: "Honorbound Recollection",
+          },
+          {
+            icon: require("@/assets/rw/030629_hr1.png"),
+            name: "Law's Order Bastard Sword",
+          },
+          {
+            icon: require("@/assets/rw/030629_hr1.png"),
+            name: "Augmented Law's Order Bastard Sword",
+          },
+          {
+            icon: require("@/assets/rw/030633_hr1.png"),
+            name: "Blade's Honor",
+          },
+        ],
+      },
+      {
+        id: 21,
+        icon: require("@/assets/warrior.png"),
+        name: "Warrior",
+        weapons: [
+          {
+            icon: require("@/assets/rw/031593_hr1.png"),
+            name: "Skullrender",
+          },
+          {
+            icon: require("@/assets/rw/031593_hr1.png"),
+            name: "Augmented Skullrender",
+          },
+          {
+            icon: require("@/assets/rw/031593_hr1.png"),
+            name: "Skullrender Recollection",
+          },
+          {
+            icon: require("@/assets/rw/031204_hr1.png"),
+            name: "Law's Order Labrys",
+          },
+          {
+            icon: require("@/assets/rw/031204_hr1.png"),
+            name: "Augmented Law's Labrys",
+          },
+          {
+            icon: require("@/assets/rw/031208_hr1.png"),
+            name: "Blade's Valor",
+          },
+        ],
+      },
+      {
+        id: 32,
+        icon: require("@/assets/darkknight.png"),
+        name: "Dark Knight",
+        weapons:[
+          {
+            icon: require("@/assets/rw/034352_hr1.png"),
+            name: "Woeborn",
+          },
+          {
+            icon: require("@/assets/rw/034352_hr1.png"),
+            name: "Augmented Woeborn",
+          },
+          {
+            icon: require("@/assets/rw/034352_hr1.png"),
+            name: "Woeborn Recollection",
+          },
+          {
+            icon: require("@/assets/rw/034358_hr1.png"),
+            name: "Law's Order Zweihander",
+          },
+          {
+            icon: require("@/assets/rw/034358_hr1.png"),
+            name: "Augmented Law's Order Zweihander",
+          },
+          {
+            icon: require("@/assets/rw/034362_hr1.png"),
+            name: "Blade's Justice",
+          },
+        ],
+      },
+      {
+        id: 37,
+        icon: require("@/assets/gunbreaker.png"),
+        name: "Gunbreaker",
+        weapons: [
+          {
+            icon: require("@/assets/rw/036041_hr1.png"),
+            name: "Crownsblade",
+          },
+          {
+            icon: require("@/assets/rw/036041_hr1.png"),
+            name: "Augmented Crownsblade",
+          },
+          {
+            icon: require("@/assets/rw/036041_hr1.png"),
+            name: "Crownsblade Recollection",
+          },
+          {
+            icon: require("@/assets/rw/036050_hr1.png"),
+            name: "Law's Order Manatrigger",
+          },
+          {
+            icon: require("@/assets/rw/036050_hr1.png"),
+            name: "Augmented Law's Order Manatrigger",
+          },
+          {
+            icon: require("@/assets/rw/036054_hr1.png"),
+            name: "Blade's Resolve",
+          },
+        ],
+      },
+      {
+        id: 24,
+        icon: require("@/assets/whitemage.png"),
+        name: "White Mage",
+        weapons: [
+          {
+            icon: require("@/assets/rw/032769_hr1.png"),
+            name: "Ingrimm",
+          },
+          {
+            icon: require("@/assets/rw/032769_hr1.png"),
+            name: "Augmented Ingrimm",
+          },
+          {
+            icon: require("@/assets/rw/032769_hr1.png"),
+            name: "Ingrimm Recollection",
+          },
+          {
+            icon: require("@/assets/rw/032777_hr1.png"),
+            name: "Law's Order Cane",
+          },
+          {
+            icon: require("@/assets/rw/032777_hr1.png"),
+            name: "Augmented Law's Order Cane",
+          },
+          {
+            icon: require("@/assets/rw/032781_hr1.png"),
+            name: "Blade's Mercy",
+          },
+        ],
+      },
+      {
+        id: 28,
+        icon: require("@/assets/scholar.png"),
+        name: "Scholar",
+        weapons: [
+          {
+            icon: require("@/assets/rw/033321_hr1.png"),
+            name: "Akademos",
+          },
+          {
+            icon: require("@/assets/rw/033321_hr1.png"),
+            name: "Augmented Akademos",
+          },
+          {
+            icon: require("@/assets/rw/033321_hr1.png"),
+            name: "Akademos Recollection",
+          },
+          {
+            icon: require("@/assets/rw/033214_hr1.png"),
+            name: "Law's Order Codex",
+          },
+          {
+            icon: require("@/assets/rw/033214_hr1.png"),
+            name: "Augmented Law's Order Codex",
+          },
+          {
+            icon: require("@/assets/rw/033221_hr1.png"),
+            name: "Blade's Wisdom",
+          },
+        ],
+      },
+      {
+        id: 33,
+        icon: require("@/assets/astrologian.png"),
+        name: "Astrologian",
+        weapons: [
+          {
+            icon: require("@/assets/rw/034945_hr1.png"),
+            name: "Solstice",
+          },
+          {
+            icon: require("@/assets/rw/034945_hr1.png"),
+            name: "Augmented Solstice",
+          },
+          {
+            icon: require("@/assets/rw/034945_hr1.png"),
+            name: "Solstice Recollection",
+          },
+          {
+            icon: require("@/assets/rw/034952_hr1.png"),
+            name: "Law's Order Astrometer",
+          },
+          {
+            icon: require("@/assets/rw/034952_hr1.png"),
+            name: "Augmented Law's Order Astrometer",
+          },
+          {
+            icon: require("@/assets/rw/034956_hr1.png"),
+            name: "Blade's Providence",
+          },
+        ],
+      },
+      {
+        id: 20,
+        icon: require("@/assets/monk.png"),
+        name: "Monk",
+        weapons: [
+          {
+            icon: require("@/assets/rw/031186_hr1.png"),
+            name: "Samsara",
+          },
+          {
+            icon: require("@/assets/rw/031186_hr1.png"),
+            name: "Augmented Samsara",
+          },
+          {
+            icon: require("@/assets/rw/031186_hr1.png"),
+            name: "Samsara Recollection",
+          },
+          {
+            icon: require("@/assets/rw/031194_hr1.png"),
+            name: "Law's Order Knuckles",
+          },
+          {
+            icon: require("@/assets/rw/031194_hr1.png"),
+            name: "Augmented Law's Order Knuckles",
+          },
+          {
+            icon: require("@/assets/rw/031198_hr1.png"),
+            name: "Blade's Serenity",
+          },
+        ],
+      },
+      {
+        id: 22,
+        icon: require("@/assets/dragoon.png"),
+        name: "Dragoon",
+        weapons: [
+          {
+            icon: require("@/assets/rw/031995_hr1.png"),
+            name: "Dreizack",
+          },
+          {
+            icon: require("@/assets/rw/031995_hr1.png"),
+            name: "Augmented Dreizack",
+          },
+          {
+            icon: require("@/assets/rw/031995_hr1.png"),
+            name: "Dreizack Recollection",
+          },
+          {
+            icon: require("@/assets/rw/031606_hr1.png"),
+            name: "Law's Order Spear",
+          },
+          {
+            icon: require("@/assets/rw/031606_hr1.png"),
+            name: "Augmented Law's Order Spear",
+          },
+          {
+            icon: require("@/assets/rw/031610_hr1.png"),
+            name: "Blade's Glory",
+          },
+        ],
+      },
+      {
+        id: 30,
+        icon: require("@/assets/ninja.png"),
+        name: "Ninja",
+        weapons: [
+          {
+            icon: require("@/assets/rw/033970_hr1.png"),
+            name: "Honeshirazu",
+          },
+          {
+            icon: require("@/assets/rw/033970_hr1.png"),
+            name: "Augmented Honeshirazu",
+          },
+          {
+            icon: require("@/assets/rw/033970_hr1.png"),
+            name: "Honeshirazu Recollection",
+          },
+          {
+            icon: require("@/assets/rw/033980_hr1.png"),
+            name: "Law's Order Knives",
+          },
+          {
+            icon: require("@/assets/rw/033980_hr1.png"),
+            name: "Augmented Law's Order Knives",
+          },
+          {
+            icon: require("@/assets/rw/033984_hr1.png"),
+            name: "Blade's Subtlety",
+          },
+        ],
+      },
+      {
+        id: 34,
+        icon: require("@/assets/samurai.png"),
+        name: "Samurai",
+        weapons: [
+          {
+            icon: require("@/assets/rw/036502_hr1.png"),
+            name: "Hoshikiri",
+          },
+          {
+            icon: require("@/assets/rw/036502_hr1.png"),
+            name: "Augmented Hoshikiri",
+          },
+          {
+            icon: require("@/assets/rw/036502_hr1.png"),
+            name: "Hoshikiri Recollection",
+          },
+          {
+            icon: require("@/assets/rw/036509_hr1.png"),
+            name: "Law's Order Samurai Blade",
+          },
+          {
+            icon: require("@/assets/rw/036509_hr1.png"),
+            name: "Augmented Law's Order Samurai Blade",
+          },
+          {
+            icon: require("@/assets/rw/036513_hr1.png"),
+            name: "Blade's Fealty",
+          },
+        ],
+      },
+      {
+        id: 23,
+        icon: require("@/assets/bard.png"),
+        name: "Bard",
+        weapons: [
+          {
+            icon: require("@/assets/rw/032386_hr1.png"),
+            name: "Brilliance",
+          },
+          {
+            icon: require("@/assets/rw/032386_hr1.png"),
+            name: "Augmented Brilliance",
+          },
+          {
+            icon: require("@/assets/rw/032386_hr1.png"),
+            name: "Brilliance Recollection",
+          },
+          {
+            icon: require("@/assets/rw/032393_hr1.png"),
+            name: "Law's Order Composite Bow",
+          },
+          {
+            icon: require("@/assets/rw/032393_hr1.png"),
+            name: "Augmented Law's Order Composite Bow",
+          },
+          {
+            icon: require("@/assets/rw/032397_hr1.png"),
+            name: "Blade's Muse",
+          },
+        ],
+      },
+      {
+        id: 31,
+        icon: require("@/assets/machinist.png"),
+        name: "Machinist",
+        weapons: [
+          {
+            icon: require("@/assets/rw/034468_hr1.png"),
+            name: "Lawman",
+          },
+          {
+            icon: require("@/assets/rw/034468_hr1.png"),
+            name: "Augmented Lawman",
+          },
+          {
+            icon: require("@/assets/rw/034468_hr1.png"),
+            name: "Lawman Recollection",
+          },
+          {
+            icon: require("@/assets/rw/034404_hr1.png"),
+            name: "Law's Order Revolver",
+          },
+          {
+            icon: require("@/assets/rw/034404_hr1.png"),
+            name: "Augmented Law's Order Revolver",
+          },
+          {
+            icon: require("@/assets/rw/034408_hr1.png"),
+            name: "Blade's Ingenuity",
+          },
+        ],
+      },
+      {
+        id: 38,
+        icon: require("@/assets/dancer.png"),
+        name: "Dancer",
+        weapons: [
+          {
+            icon: require("@/assets/rw/036244_hr1.png"),
+            name: "Enchufla",
+          },
+          {
+            icon: require("@/assets/rw/036244_hr1.png"),
+            name: "Augmented Enchufla",
+          },
+          {
+            icon: require("@/assets/rw/036244_hr1.png"),
+            name: "Enchufla Recollection",
+          },
+          {
+            icon: require("@/assets/rw/036249_hr1.png"),
+            name: "Law's Order Chakrams",
+          },
+          {
+            icon: require("@/assets/rw/036249_hr1.png"),
+            name: "Augmented Law's Order Chakrams",
+          },
+          {
+            icon: require("@/assets/rw/036253_hr1.png"),
+            name: "Blade's Euphoria",
+          },
+        ],
+      },
+      {
+        id: 25,
+        icon: require("@/assets/blackmage.png"),
+        name: "Black Mage",
+        weapons: [
+          {
+            icon: require("@/assets/rw/033140_hr1.png"),
+            name: "Soulscourge",
+          },
+          {
+            icon: require("@/assets/rw/033140_hr1.png"),
+            name: "Augmented Soulscourge",
+          },
+          {
+            icon: require("@/assets/rw/033140_hr1.png"),
+            name: "Soulscourge Recollection",
+          },
+          {
+            icon: require("@/assets/rw/033148_hr1.png"),
+            name: "Law's Order Rod",
+          },
+          {
+            icon: require("@/assets/rw/033148_hr1.png"),
+            name: "Augmented Law's Order Rod",
+          },
+          {
+            icon: require("@/assets/rw/033152_hr1.png"),
+            name: "Blade's Fury",
+          },
+        ],
+      },
+      {
+        id: 27,
+        icon: require("@/assets/summoner.png"),
+        name: "Summoner",
+        weapons: [
+          {
+            icon: require("@/assets/rw/033322_hr1.png"),
+            name: "Espiritus",
+          },
+          {
+            icon: require("@/assets/rw/033322_hr1.png"),
+            name: "Augmented Espiritus",
+          },
+          {
+            icon: require("@/assets/rw/033322_hr1.png"),
+            name: "Espiritus Recollection",
+          },
+          {
+            icon: require("@/assets/rw/033213_hr1.png"),
+            name: "Law's Order Index",
+          },
+          {
+            icon: require("@/assets/rw/033213_hr1.png"),
+            name: "Augmented Law's Order Index",
+          },
+          {
+            icon: require("@/assets/rw/033222_hr1.png"),
+            name: "Blade's Acumen",
+          },
+        ],
+      },
+      {
+        id: 35,
+        icon: require("@/assets/redmage.png"),
+        name: "Red Mage",
+        weapons: [
+          {
+            icon: require("@/assets/rw/036801_hr1.png"),
+            name: "Talekeeper",
+          },
+          {
+            icon: require("@/assets/rw/036801_hr1.png"),
+            name: "Augmented Talekeeper",
+          },
+          {
+            icon: require("@/assets/rw/036801_hr1.png"),
+            name: "Talekeeper Recollection",
+          },
+          {
+            icon: require("@/assets/rw/036808_hr1.png"),
+            name: "Law's Order Rapier",
+          },
+          {
+            icon: require("@/assets/rw/036808_hr1.png"),
+            name: "Augmented Law's Order Rapier",
+          },
+          {
+            icon: require("@/assets/rw/036812_hr1.png"),
+            name: "Blade's Temperance",
+          },
+        ],
+      },
+    ],
     jobCategories: [
       {
         id: 1,
@@ -15,136 +545,18 @@ export default new Vuex.Store({
         jobs: [
           {
             id: 19,
-            icon: require("@/assets/paladin.png"),
             name: "Paladin",
-            weapons: [
-              {
-                id: 30228,
-                icon: require("@/assets/rw/030620_hr1.png"),
-                name: "Honorbound",
-                questId: 69381,
-              },
-              {
-                id: 30767,
-                icon: require("@/assets/rw/030620_hr1.png"),
-                name: "Augmented Honorbound",
-                questId: 69506,
-              },
-              {
-                id: 30785,
-                icon: require("@/assets/rw/030620_hr1.png"),
-                name: "Honorbound Recollection",
-                questId: 69507,
-              },
-              {
-                id: 32651,
-                icon: require("@/assets/rw/030629_hr1.png"),
-                name: "Law's Order Bastard Sword",
-                questId: 69574,
-              },
-              {
-                id: 32669,
-                icon: require("@/assets/rw/030629_hr1.png"),
-                name: "Augmented Law's Order Bastard Sword",
-                questId: 69576,
-              },
-              {
-                id: 33462,
-                icon: require("@/assets/rw/030633_hr1.png"),
-                name: "Blade's Honor",
-                questId: 69637,
-              },
-            ],
           },
           {
             id: 21,
-            icon: require("@/assets/warrior.png"),
             name: "Warrior",
-            weapons: [
-              {
-                id: 30230,
-                icon: require("@/assets/rw/031593_hr1.png"),
-                name: "Skullrender",
-                questId: 69381,
-              },
-              {
-                id: 30769,
-                icon: require("@/assets/rw/031593_hr1.png"),
-                name: "Augmented Skullrender",
-                questId: 69506,
-              },
-              {
-                id: 30787,
-                icon: require("@/assets/rw/031593_hr1.png"),
-                name: "Skullrender Recollection",
-                questId: 69507,
-              },
-              {
-                id: 32653,
-                icon: require("@/assets/rw/031204_hr1.png"),
-                name: "Law's Order Labrys",
-                questId: 69574,
-              },
-              {
-                id: 32671,
-                icon: require("@/assets/rw/031204_hr1.png"),
-                name: "Augmented Law's Labrys",
-                questId: 69576,
-              },
-              {
-                id: 33464,
-                icon: require("@/assets/rw/031208_hr1.png"),
-                name: "Blade's Valor",
-                questId: 69637,
-              },
-            ],
           },
           {
             id: 32,
-            icon: require("@/assets/darkknight.png"),
             name: "Dark Knight",
-            weapons: [
-              {
-                id: 30234,
-                icon: require("@/assets/rw/034352_hr1.png"),
-                name: "Woeborn",
-                questId: 69381,
-              },
-              {
-                id: 30773,
-                icon: require("@/assets/rw/034352_hr1.png"),
-                name: "Augmented Woeborn",
-                questId: 69506,
-              },
-              {
-                id: 30791,
-                icon: require("@/assets/rw/034352_hr1.png"),
-                name: "Woeborn Recollection",
-                questId: 69507,
-              },
-              {
-                id: 32657,
-                icon: require("@/assets/rw/034358_hr1.png"),
-                name: "Law's Order Zweihander",
-                questId: 69574,
-              },
-              {
-                id: 32675,
-                icon: require("@/assets/rw/034358_hr1.png"),
-                name: "Augmented Law's Zweihander",
-                questId: 69576,
-              },
-              {
-                id: 33464,
-                icon: require("@/assets/rw/034362_hr1.png"),
-                name: "Blade's Justice",
-                questId: 69637,
-              },
-            ],
           },
           {
             id: 37,
-            icon: require("@/assets/gunbreaker.png"),
             name: "Gunbreaker",
           },
         ],
@@ -155,17 +567,14 @@ export default new Vuex.Store({
         jobs: [
           {
             id: 24,
-            icon: require("@/assets/whitemage.png"),
             name: "White Mage",
           },
           {
             id: 28,
-            icon: require("@/assets/scholar.png"),
             name: "Scholar",
           },
           {
             id: 33,
-            icon: require("@/assets/astrologian.png"),
             name: "Astrologian",
           },
         ],
@@ -176,22 +585,18 @@ export default new Vuex.Store({
         jobs: [
           {
             id: 20,
-            icon: require("@/assets/monk.png"),
             name: "Monk",
           },
           {
             id: 22,
-            icon: require("@/assets/dragoon.png"),
             name: "Dragoon",
           },
           {
             id: 30,
-            icon: require("@/assets/ninja.png"),
             name: "Ninja",
           },
           {
             id: 34,
-            icon: require("@/assets/samurai.png"),
             name: "Samurai",
           },
         ],
@@ -202,17 +607,14 @@ export default new Vuex.Store({
         jobs: [
           {
             id: 23,
-            icon: require("@/assets/bard.png"),
             name: "Bard",
           },
           {
             id: 31,
-            icon: require("@/assets/machinist.png"),
             name: "Machinist",
           },
           {
             id: 38,
-            icon: require("@/assets/dancer.png"),
             name: "Dancer",
           },
         ],
@@ -223,17 +625,14 @@ export default new Vuex.Store({
         jobs: [
           {
             id: 25,
-            icon: require("@/assets/blackmage.png"),
             name: "Black Mage",
           },
           {
             id: 27,
-            icon: require("@/assets/summoner.png"),
             name: "Summoner",
           },
           {
             id: 35,
-            icon: require("@/assets/redmage.png"),
             name: "Red Mage",
           },
         ],
@@ -251,6 +650,7 @@ export default new Vuex.Store({
             quantity: 4,
           },
         ],
+        nextId: 69506,
       },
       {
         id: 69506,
@@ -275,6 +675,7 @@ export default new Vuex.Store({
             quantity: 20,
           },
         ],
+        nextId: 69507,
       },
       {
         id: 69507,
@@ -287,6 +688,7 @@ export default new Vuex.Store({
             quantity: 6,
           },
         ],
+        nextId: 69574,
       },
       {
         id: 69574,
@@ -299,6 +701,7 @@ export default new Vuex.Store({
             quantity: 15,
           },
         ],
+        nextId: 69576,
       },
       {
         id: 69576,
@@ -311,6 +714,7 @@ export default new Vuex.Store({
             quantity: 15,
           },
         ],
+        nextId: 69637,
       },
       {
         id: 69637,
@@ -323,12 +727,16 @@ export default new Vuex.Store({
             quantity: 15,
           },
         ],
+        nextId: null
       },
     ],
   },
   getters: {
     getQuestById: (state) => (id) => {
       return state.quests.find((quest) => quest.id === id);
+    },
+    getQuestByStage: (state) => (index) => {
+      return state.quests[index];
     },
     getCategoryById: (state) => (id) => {
       return state.jobCategories.find((category) => category.id === id);
@@ -344,6 +752,14 @@ export default new Vuex.Store({
     SET_SELECTED_JOBS(state, args) {
       state.rwConfig.selectedJobs = args;
       localStorage.rwConfig = JSON.stringify(state.rwConfig);
+    },
+    SET_JOB_PROGRESS(state, args) {
+      const jobProgressIndex = state.rwConfig.progress.findIndex((obj) => obj.id === args.id);
+      if (jobProgressIndex > -1) {
+        state.rwConfig.progress.splice(jobProgressIndex, 1);
+      }
+      state.rwConfig.progress.push(args);
+      localStorage.rwConfig = JSON.stringify(state.rwConfig);
     }
   },
   actions: {
@@ -352,6 +768,9 @@ export default new Vuex.Store({
     },
     setSelectedJobs({ commit }, args) {
       commit('SET_SELECTED_JOBS', args);
+    },
+    setJobProgress({ commit }, args) {
+      commit('SET_JOB_PROGRESS', args);
     }
   },
   modules: {},
